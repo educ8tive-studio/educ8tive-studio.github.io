@@ -58,9 +58,11 @@
             // Default to github if no UTMs are present
             if (!currentParams || currentParams === "") {
                 currentParams = "?utm_source=github";
+
             } else {
-                currentParams = currentParams + "&utm_campaign=GithubWebsiteRedirect";
+                currentParams = currentParams + "&utm_source=github&utm_campaign=GithubWebsiteRedirect";
             }
+
             
             var finalUrl = baseUrl + currentParams;
             var timerDisplay = document.getElementById("timer");
