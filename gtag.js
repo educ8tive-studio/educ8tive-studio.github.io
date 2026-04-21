@@ -3,7 +3,7 @@ const script = document.createElement('script');
 script.async = true;
 // Use your primary ID in the URL
 script.src = "https://www.googletagmanager.com/gtag/js?id=G-K57632CCGB";
-document.head.appendChild(script);
+document.body.appendChild(script);
 
 // 2. Initialize gtag
 window.dataLayer = window.dataLayer || [];
@@ -18,5 +18,5 @@ gtag('config', 'AW-17952891258');      // Another GA4 property
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;document.head.appendChild(j);
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;document.body.appendChild(j);
 })(window,document,'script','dataLayer','GTM-WJQVFQZD');
