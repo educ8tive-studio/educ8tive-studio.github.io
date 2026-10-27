@@ -1,0 +1,19 @@
+<script>
+  (function () {
+    var current = new URLSearchParams(window.location.search);
+    var target = new URL('../../Lessons-From-The-Bible/Noah/Grades-3-6.html', window.location.href);
+    var keepPattern = /^(utm_|fbclid|gclid|igshid|msclkid|dclid|mc_|mkt_tok|ref|source|medium|campaign|content|term|keyword)$/i;
+
+    for (var pair of current.entries()) {
+      if (keepPattern.test(pair[0]) && !target.searchParams.has(pair[0])) {
+        target.searchParams.append(pair[0], pair[1]);
+      }
+    }
+
+    if (!target.searchParams.has('utm_source')) {
+      target.searchParams.set('utm_source', 'github');
+    }
+
+    window.location.replace(target.toString());
+  })();
+</script>
