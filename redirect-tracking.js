@@ -28,7 +28,7 @@
     }
 
     if (!target.searchParams.has('utm_source')) {
-      target.searchParams.set('utm_source', 'github');
+      target.searchParams.set('utm_source', 'website');
     }
 
     window.location.replace(target.toString());
